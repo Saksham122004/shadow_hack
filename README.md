@@ -11,12 +11,12 @@ Designed for cybersecurity education, authorized security testing, and defensive
 ## 🎬 Demo Preview
 
 <p align="center">
-  <a href="https://github.com/Saksham122004/shadow_hack/blob/main/images/demo.mp4">
+  <a href="https://github.com/Saksham122004/shadow_hack/blob/main/images/demo.gif">
     <img src="https://img.shields.io/badge/▶-Watch%20Project%20Demo-blue?style=for-the-badge" alt="Watch Demo">
   </a>
 </p>
 
-**Demo Video:** [View Shadow Hack Demo](https://github.com/Saksham122004/shadow_hack/blob/main/images/demo.mp4)
+**Demo Video:** [View Shadow Hack Demo](https://github.com/Saksham122004/shadow_hack/blob/main/images/demo.gif)
 
 ---
 
@@ -70,7 +70,7 @@ It is intended for controlled security research, source-code analysis, and cyber
 shadow_hack/
 │
 ├── images/
-│   └── demo.mp4
+│   └── demo.gif
 │
 ├── shadow_hack.py
 ├── requirements.txt
