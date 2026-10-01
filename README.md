@@ -1,73 +1,71 @@
 # 🛡️ Shadow Hack
 
-### Python-Based Flask Security Testing Tool
-
-A Python-based Flask application featuring customizable web templates, browser interaction routines, session logging, and optional Cloudflare/Ngrok tunneling.
-
-Designed for cybersecurity education, authorized security testing, and defensive code analysis.
-
----
-
-## 🎬 Demo Preview
-<h2 align="center">🎬 Project Demo</h2>
-
 <p align="center">
-  <img src="images/demo.gif" width="800" alt="Shadow Hack Demo">
+  <img src="https://raw.githubusercontent.com/Saksham122004/shadow_hack/main/image/demo.gif" alt="Shadow Hack Demo" width="800">
 </p>
 
+<p align="center">
+  <b>Python-Based Security Research & Web Interface Project</b>
+</p>
 
----
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10+-blue?logo=python">
+  <img src="https://img.shields.io/badge/Framework-Flask-black?logo=flask">
+  <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20Windows-lightgrey">
+  <img src="https://img.shields.io/badge/Status-Educational-orange">
+</p>
 
-## 📌 Overview
+## 📌 About
 
-Shadow Hack is a Python-based Flask application that combines a web interface with a terminal-based configuration menu.
+Shadow Hack is a Python and Flask-based security research project featuring a terminal interface, configurable web templates, and a local testing environment.
 
-The application contains themed web templates, browser interaction routines, local file storage, JSON event logging, and optional tunnel integrations.
-
-It is intended for controlled security research, source-code analysis, and cybersecurity awareness demonstrations.
-
-> ⚠️ **Security Notice:** The source includes functionality that may request access to camera, microphone, location, contacts, selected media, and device information. Use only with explicit informed consent and authorization.
-
----
+It demonstrates web application architecture, browser permission handling, HTTP requests, and security monitoring concepts.
 
 ## ✨ Features
 
-* Flask-based web server
-* Customizable web templates
-* Browser and device information handling
-* Session and event logging
-* JSON-based record storage
-* Local file management
+* Flask-based web interface
+* Interactive terminal menu
+* Multiple UI templates
 * Configurable application settings
-* Optional Cloudflare Tunnel integration
-* Optional Ngrok integration
-* Optional nport integration
-* Terminal-based configuration menu
-* Local dashboard functionality
+* Local testing environment
+* JSON-based event logging
+* Educational browser permission demonstrations
 
----
+## 🧰 Requirements
 
-## 🧰 Technologies Used
+* Python 3.10+
+* Flask
+* Modern web browser
+* Git
 
-| Technology        | Purpose              |
-| ----------------- | -------------------- |
-| Python            | Core application     |
-| Flask             | Web server           |
-| HTML              | Web interface        |
-| CSS               | Styling              |
-| JavaScript        | Browser interactions |
-| JSON              | Event logging        |
-| Cloudflare Tunnel | Optional tunneling   |
-| Ngrok             | Optional tunneling   |
+## 📥 Installation
 
----
+```bash
+git clone https://github.com/Saksham122004/shadow_hack.git
+
+cd shadow_hack
+
+pip install -r requirements.txt
+```
+
+## 🚀 Usage
+
+```bash
+python main.py
+```
+
+Open your browser:
+
+```text
+http://127.0.0.1:8080
+```
 
 ## 📂 Project Structure
 
 ```text
 shadow_hack/
 │
-├── images/
+├── image/
 │   └── demo.gif
 │
 ├── shadow_hack.py
@@ -75,88 +73,15 @@ shadow_hack/
 └── README.md
 ```
 
----
+## ⚠️ Disclaimer
 
-## ⚙️ Installation
+This project is intended for educational purposes and authorized security research.
 
-### 1. Clone Repository
+Use only in environments where you have explicit permission. Do not collect personal information, access devices, or record audio/video without informed consent.
 
-```bash
-git clone https://github.com/Saksham122004/shadow_hack.git
-```
+The author is not responsible for misuse.
 
-### 2. Navigate to Project
-
-```bash
-cd shadow_hack
-```
-
-### 3. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Run Application
-
-```bash
-python shadow_hack.py
-```
-
-Run only in an isolated, authorized test environment.
-
----
-
-## 🔍 Security Review
-
-The source contains several security-sensitive behaviors:
-
-* Web pages may use misleading themes to request browser permissions.
-* Browser data and media may be transmitted to the Flask server.
-* Public tunnel integrations can expose the application externally.
-* Local storage may contain sensitive information.
-* Upload endpoints require appropriate authentication and input validation.
-* Encryption and data-retention controls should be considered.
-
-Some interface claims, such as exact phone tracking or dark-web scanning, are not demonstrated by the browser routines described in this review.
-
----
-
-## 🔐 Safe Usage
-
-* Use an isolated lab environment.
-* Use synthetic data and test accounts.
-* Do not expose the application through public tunnels during code review.
-* Do not access another person's device or information without explicit authorization.
-* Use local mock data for security awareness demonstrations.
-* Restrict access to any test artifacts and remove them after analysis.
-
----
-
-## 🎯 Project Purpose
-
-This repository is intended for:
-
-* Cybersecurity education
-* Python and Flask code review
-* Web application security analysis
-* Browser permission security awareness
-* Defensive security research
-* Controlled laboratory testing
-
----
-
-## ⚖️ Disclaimer
-
-This project is documented for educational and defensive cybersecurity research purposes.
-
-Any testing must be performed with explicit authorization, informed consent, and within a controlled environment.
-
-The repository owner is not responsible for unauthorized access, privacy violations, misuse, or damage resulting from improper use.
-
----
-
-## 👨‍💻 Developer
+## 👨‍💻 Author
 
 **Saksham Katiyar**
 
@@ -165,5 +90,5 @@ GitHub: [@Saksham122004](https://github.com/Saksham122004)
 ---
 
 <p align="center">
-  <b>Built for Cybersecurity Research 🛡️</b>
+  Made for Cybersecurity Research & Learning
 </p>
