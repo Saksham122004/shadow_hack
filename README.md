@@ -97,8 +97,3 @@ shadow_hack/
 This project is intended for educational purposes and authorized security research.
 Use only in environments where you have explicit permission. Do not collect personal information, access devices, or record audio/video without informed consent.
 The author is not responsible for misuse.
-
-## 👨‍💻 Author
-
-**Saksham Katiyar**
-GitHub: [@Saksham122004](https://github.com/Saksham122004)
