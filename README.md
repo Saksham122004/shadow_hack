@@ -79,12 +79,6 @@ pip install -r requirements.txt
 python shadow_hack.py
 ```
 
-Open your browser:
-
-```text
-http://127.0.0.1:8080
-```
-
 ## 📂 Project Structure
 
 ```text
