@@ -9,14 +9,12 @@ Designed for cybersecurity education, authorized security testing, and defensive
 ---
 
 ## 🎬 Demo Preview
+<h2 align="center">🎬 Project Demo</h2>
 
 <p align="center">
-  <a href="https://github.com/Saksham122004/shadow_hack/blob/main/images/demo.mp4">
-    <img src="https://img.shields.io/badge/▶_Watch_Demo-Video-blue?style=for-the-badge" alt="Watch Demo">
-  </a>
+  <img src="images/demo.gif" width="800" alt="Shadow Hack Demo">
 </p>
 
-**Demo Video:** [View Shadow Hack Demo](https://github.com/Saksham122004/shadow_hack/blob/main/images/demo.gif)
 
 ---
 
