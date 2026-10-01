@@ -1,65 +1,171 @@
-# shadow_hack
-Description (2 Lines):  A Python-based Flask tool for simulating phishing campaigns with customizable web templates, data collection modes, and Cloudflare/Ngrok tunneling. It includes session logging, device information collection, and a local dashboard for monitoring captured data in authorized security testing environments.
-# Shadow Hack — Security Code Review
+# 🛡️ Shadow Hack
 
-> **Security notice:** This source contains functionality that can collect browser/device information and attempt to access a user's camera, microphone, location, contacts, and selected media, then transmit data to a Flask server. It also supports public tunnel services. Do not deploy it against real people or devices.
+### Python-Based Flask Security Testing Tool
 
-## Overview
+A Python-based Flask application featuring customizable web templates, browser interaction routines, session logging, and optional Cloudflare/Ngrok tunneling.
 
-The Python application combines a Flask web server with a terminal-based configuration menu. Its source includes themed web pages, configurable browser data collection routines, local file storage, JSON event logging, and optional tunnel-process management.
+Designed for cybersecurity education, authorized security testing, and defensive code analysis.
 
-This README documents the code at a high level for review and controlled defensive analysis. It is not deployment guidance.
+---
 
-## Components
+## 🎬 Demo Preview
 
-- **Flask server:** Serves a page and accepts JSON submissions at `/upload`.
-- **Web interface:** Uses HTML, CSS, and JavaScript embedded in the Python source.
-- **Collection routines:** Source includes routines involving camera, video/audio, geolocation, contacts, selected gallery files, and device/browser metadata.
-- **Local storage:** Creates a `LOOT` directory and writes event records to `victims.json`.
-- **Tunnel integrations:** Contains code paths for Cloudflare Tunnel, ngrok, and nport.
-- **Terminal menu:** Offers template, mode, duration, tunnel, and output-folder configuration.
+<p align="center">
+  <a href="https://github.com/Saksham122004/shadow_hack/blob/main/images/demo.mp4">
+    <img src="https://img.shields.io/badge/▶-Watch%20Project%20Demo-blue?style=for-the-badge" alt="Watch Demo">
+  </a>
+</p>
 
-## Technology
+**Demo Video:** [View Shadow Hack Demo](https://github.com/Saksham122004/shadow_hack/blob/main/images/demo.mp4)
 
-- Python
-- Flask
-- HTML, CSS, JavaScript
-- Browser MediaDevices, Geolocation, Contacts, and File APIs
-- Optional external tunnel utilities
+---
 
-## Source Layout
+## 📌 Overview
 
-The application is currently provided as a single Python file. Major areas include:
+Shadow Hack is a Python-based Flask application that combines a web interface with a terminal-based configuration menu.
 
-| Area | Purpose |
-|---|---|
-| Configuration | Port, storage paths, duration, tunnel selection |
-| Templates | Web page content and presentation |
-| Browser scripts | Client-side collection routines |
-| Flask routes | Page serving and upload handling |
-| Tunnel helpers | External tunnel process management |
-| Menu functions | Interactive terminal configuration |
-| Storage/logging | Local files and JSON event history |
+The application contains themed web templates, browser interaction routines, local file storage, JSON event logging, and optional tunnel integrations.
 
-## Important Security Findings
+It is intended for controlled security research, source-code analysis, and cybersecurity awareness demonstrations.
 
-The source should be treated as **high risk**:
+> ⚠️ **Security Notice:** The source includes functionality that may request access to camera, microphone, location, contacts, selected media, and device information. Use only with explicit informed consent and authorization.
 
-- It presents misleading scenarios (for example, giveaways, age checks, and tracking claims) before requesting personal information or browser permissions.
-- It can transmit collected media and personal/device data to the server.
-- It creates public tunnel URLs, potentially exposing the service beyond the local machine.
-- It writes collected data to disk without an evident encryption or retention policy.
-- The upload route does not show authentication, authorization, CSRF protection, or robust input-size limits.
-- Some displayed claims (such as exact phone tracking or dark-web scanning) are not implemented by the shown browser routines.
+---
 
-## Safe Handling
+## ✨ Features
 
-1. Do not run this against other people, public devices, or production systems.
-2. If reviewing behavior, use an isolated, offline lab with synthetic data and no public tunnel.
-3. Do not grant browser permissions to an untrusted page.
-4. Keep any test artifacts access-restricted and delete them after analysis.
-5. For a legitimate training demo, replace collection and upload behavior with a local-only mock that uses synthetic data and clear, informed consent.
+* Flask-based web server
+* Customizable web templates
+* Browser and device information handling
+* Session and event logging
+* JSON-based record storage
+* Local file management
+* Configurable application settings
+* Optional Cloudflare Tunnel integration
+* Optional Ngrok integration
+* Optional nport integration
+* Terminal-based configuration menu
+* Local dashboard functionality
 
-## Disclaimer
+---
 
-This document is for source-code understanding and defensive security review. Any testing should be authorized, transparent, and limited to systems and data you control.
+## 🧰 Technologies Used
+
+| Technology        | Purpose              |
+| ----------------- | -------------------- |
+| Python            | Core application     |
+| Flask             | Web server           |
+| HTML              | Web interface        |
+| CSS               | Styling              |
+| JavaScript        | Browser interactions |
+| JSON              | Event logging        |
+| Cloudflare Tunnel | Optional tunneling   |
+| Ngrok             | Optional tunneling   |
+
+---
+
+## 📂 Project Structure
+
+```text
+shadow_hack/
+│
+├── images/
+│   └── demo.mp4
+│
+├── shadow_hack.py
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## ⚙️ Installation
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/Saksham122004/shadow_hack.git
+```
+
+### 2. Navigate to Project
+
+```bash
+cd shadow_hack
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run Application
+
+```bash
+python shadow_hack.py
+```
+
+Run only in an isolated, authorized test environment.
+
+---
+
+## 🔍 Security Review
+
+The source contains several security-sensitive behaviors:
+
+* Web pages may use misleading themes to request browser permissions.
+* Browser data and media may be transmitted to the Flask server.
+* Public tunnel integrations can expose the application externally.
+* Local storage may contain sensitive information.
+* Upload endpoints require appropriate authentication and input validation.
+* Encryption and data-retention controls should be considered.
+
+Some interface claims, such as exact phone tracking or dark-web scanning, are not demonstrated by the browser routines described in this review.
+
+---
+
+## 🔐 Safe Usage
+
+* Use an isolated lab environment.
+* Use synthetic data and test accounts.
+* Do not expose the application through public tunnels during code review.
+* Do not access another person's device or information without explicit authorization.
+* Use local mock data for security awareness demonstrations.
+* Restrict access to any test artifacts and remove them after analysis.
+
+---
+
+## 🎯 Project Purpose
+
+This repository is intended for:
+
+* Cybersecurity education
+* Python and Flask code review
+* Web application security analysis
+* Browser permission security awareness
+* Defensive security research
+* Controlled laboratory testing
+
+---
+
+## ⚖️ Disclaimer
+
+This project is documented for educational and defensive cybersecurity research purposes.
+
+Any testing must be performed with explicit authorization, informed consent, and within a controlled environment.
+
+The repository owner is not responsible for unauthorized access, privacy violations, misuse, or damage resulting from improper use.
+
+---
+
+## 👨‍💻 Developer
+
+**Saksham Katiyar**
+
+GitHub: [@Saksham122004](https://github.com/Saksham122004)
+
+---
+
+<p align="center">
+  <b>Built for Cybersecurity Research 🛡️</b>
+</p>
